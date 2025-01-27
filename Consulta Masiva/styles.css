@@ -1,0 +1,243 @@
+/* General Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #FFFFFF; /* Fondo blanco */
+  margin: 0;
+  padding: 0;
+  color: #000000; /* Letras negras */
+}
+
+/* Container */
+.container {
+  max-width: 90vw;
+  width: 90vw;
+  height: auto;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco semi-transparente para el contenedor */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(10, 2, 166, 0.2);
+  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.container1 {
+  max-width: 30vw;
+  width: 95vw;
+  height: auto;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 249, 0.7); /* Fondo blanco semi-transparente para el contenedor */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(10, 2, 166, 0.2);
+  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.column-scroll {
+  max-height: 150px;
+  overflow-y: auto;
+  padding-right: 5px;
+  box-sizing: border-box;
+}
+
+th,
+td {
+  border: 2px solid #110bc9;
+  padding: 10px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #000; /* Texto negro en las celdas */
+}
+
+th {
+  background-color: #0a6dd0;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #4c8cfc5c; /* Gris claro para filas pares */
+}
+
+@media (max-width: 768px) {
+  table {
+      display: block;
+      overflow-x: auto;
+  }
+
+  th,
+  td {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      text-align: left;
+  }
+
+  th {
+      text-align: center;
+  }
+}
+
+header {
+  width: 100%;
+  height: auto; /* Altura automática para el header */
+  overflow: hidden;
+  display: center; /* Usar flexbox para centrar */
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.105); /* Fondo blanco semi-transparente */
+}
+
+.header-image {
+  width: 95%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.main-content {
+  padding: 40px;
+  color: #000; /* Texto negro en el contenido principal */
+  background-color: rgba(255, 255, 255, 0.105); /* Fondo blanco semi-transparente */
+}
+
+.logo {
+  height: 50px;
+  margin-right: 15px;
+}
+
+.header h1 {
+  font-size: 24px;
+  margin: 0;
+  flex: 1;
+  color: #080076; /* Texto negro en el título */
+}
+
+.filters {
+  display: flex; /* Usamos Flexbox */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea si no caben */
+  gap: 20px; /* Espacio entre los fieldsets */
+  margin-bottom: 20px;
+  justify-content: flex-start; /* Alinea los elementos al inicio (izquierda) */
+}
+
+.filters fieldset {
+  border: 10px solid #2f8ce2f6;
+  padding: 10px;
+  box-sizing: border-box;
+  flex: 1 0 200px; /* Distribuye el espacio entre los fieldsets, con un mínimo de 200px de ancho */
+}
+
+.filters legend {
+  font-weight: bold;
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .filters {
+      flex-direction: column; /* Apila los fieldsets verticalmente en pantallas pequeñas */
+      align-items: stretch; /* Estira los fieldsets para que ocupen todo el ancho */
+  }
+  .filters fieldset {
+    flex: 1 0 100%;
+  }
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000000; /* Texto negro en las etiquetas */
+}
+
+select {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #7b1111;
+  background-color: #3dcbff; /* Fondo blanco para el select */
+  width: 100%;
+  color: #ffffff; /* Texto negro en el select */
+}
+
+.buttons {
+  display: flex; /* Activar Flexbox */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  gap: 20px; /* Espacio entre botones */
+  margin-bottom: 20px; /* Espaciado adicional */
+}
+
+button {
+  padding: 20px 30px;
+  font-size: 14px;
+  border: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  background-color: #2196f3;
+}
+
+button:hover {
+  background-color: #ef2506;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.image-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.btn-volver {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+h1 {
+  background-color: rgba(0, 123, 255, 0.2); /* Light blue with 20% opacity */
+  border-radius: 10px; /* Rounded corners */
+  padding: 10px; /* Padding around the text */
+}
+/* Estilo del checkbox por defecto */
+input[type="checkbox"] {
+  appearance: none; /* Elimina el estilo predeterminado del navegador */
+  width: 20px;
+  height: 20px;
+  border: 2px solid #7b1111; /* Borde inicial */
+  border-radius: 5px; /* Esquinas redondeadas */
+  background-color: #ffffff; /* Fondo blanco */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Animación suave */
+}
+
+/* Estilo cuando el checkbox está marcado */
+input[type="checkbox"]:checked {
+  background-color: #28a745; /* Fondo verde al marcar */
+  border-color: #28a745; /* Borde verde al marcar */
+}
+
